@@ -10,13 +10,12 @@ var deviceCredentials = {
   reconnectPeriod: 1500
 };
 
-var door = new Gpio(6, 'out');
-door.write(0);
+var door = new Gpio(1, 'out');
+door.write(1);
 
 var device = awsIot.device(deviceCredentials);
 device.subscribe("door");
 device.on('message', function(topic, payload) {
-
   console.log("recieved message");
   console.log(payload);
   payload = JSON.parse(payload);
