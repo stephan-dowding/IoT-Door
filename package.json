@@ -1,0 +1,23 @@
+{
+  "name": "iot-door",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephan-dowding/IoT-Door.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stephan-dowding/IoT-Door/issues"
+  },
+  "homepage": "https://github.com/stephan-dowding/IoT-Door#readme",
+  "dependencies": {
+    "aws-iot-device-sdk": "^1.0.12",
+    "chip-gpio": "^1.0.1"
+  }
+}
