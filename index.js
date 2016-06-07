@@ -16,11 +16,17 @@ door.write(0);
 var device = awsIot.device(deviceCredentials);
 device.subscribe("door");
 device.on('message', function(topic, payload) {
-    payload = JSON.parse(payload);
-    switch (payload.event) {
-      case "open":
-        door.write(1);
-        setTimeout(() => {door.write(0)}, 1000);
-        break;
-    }
+
+  console.log("recieved message");
+  console.log(payload);
+  payload = JSON.parse(payload);
+  switch (payload.event) {
+    case "open":
+      console.log("OPEN!!");
+      door.write(1);
+      setTimeout(() => {door.write(0)}, 1000);
+      break;
+  }
 });
+
+console.log("started");
