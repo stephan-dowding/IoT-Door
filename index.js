@@ -10,7 +10,7 @@ var deviceCredentials = {
   reconnectPeriod: 1500
 };
 
-var door = new Gpio(0, 'out');
+var door = new Gpio(6, 'out');
 door.write(0);
 
 var device = awsIot.device(deviceCredentials);
