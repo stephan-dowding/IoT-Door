@@ -18,6 +18,13 @@ device.on('connect', function() {
   console.log('connect');
   device.subscribe("door");
 });
+
+device.on('error', function(error) {
+  console.log("ERROR **************");
+  console.log(error);
+  console.log("********************");
+})
+
 device.on('message', function(topic, payload) {
   console.log("recieved message");
   payload = JSON.parse(payload);
