@@ -14,7 +14,10 @@ var door = new Gpio(1, 'out');
 door.write(1);
 
 var device = awsIot.device(deviceCredentials);
-device.subscribe("door");
+device.on('connect', function() {
+  console.log('connect');
+  device.subscribe("door");
+});
 device.on('message', function(topic, payload) {
   console.log("recieved message");
   payload = JSON.parse(payload);
