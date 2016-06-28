@@ -2,11 +2,11 @@ var awsIot = require('aws-iot-device-sdk');
 var Gpio = require('chip-gpio').Gpio;
 var deviceName = "chip-door";
 var deviceCredentials = {
-  keyPath: '/home/chip/certs/private.pem.key',
-  certPath: '/home/chip/certs/certificate.pem.crt',
+  keyPath: '/home/chip/certs/us-east-1/private.pem.key',
+  certPath: '/home/chip/certs/us-east-1/certificate.pem.crt',
   caPath: '/home/chip/certs/root-CA.pem',
   clientId: deviceName,
-  region: 'ap-southeast-1',
+  region: 'us-east-1',
   reconnectPeriod: 1500
 };
 
