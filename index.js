@@ -1,3 +1,4 @@
+console.log("starting...");
 var awsIot = require('aws-iot-device-sdk');
 var Gpio = require('chip-gpio').Gpio;
 var deviceName = "chip-door";
@@ -15,7 +16,7 @@ door.write(1);
 
 var device = awsIot.device(deviceCredentials);
 device.on('connect', function() {
-  console.log('connect');
+  console.log('connected');
   device.subscribe("door");
 });
 
